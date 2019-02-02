@@ -18,6 +18,10 @@ name = "link2print"
 path = "tools/src/bin/link2print.rs"
 
 [[bin]]
+name = "update_edition"
+path = "tools/src/bin/update_edition.rs"
+
+[[bin]]
 name = "remove_links"
 path = "tools/src/bin/remove_links.rs"
 
