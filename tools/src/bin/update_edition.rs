@@ -46,7 +46,7 @@ fn update_edition_links(source_dir:&str, target_dir:&str) -> io::Result<()> {
         src.read_to_string(&mut data)?;  
         drop(src);
 
-        let new_data = data.replace("../index.html", &["../", file.1.file_name().unwrap().to_str().unwrap()].concat());
+        let new_data = data.replace("../index.html", &["../", file.1.file_stem().unwrap().to_str().unwrap(), ".html"].concat());
 
         let mut dst = File::create(file.1)?;
         dst.write(new_data.as_bytes())?;
